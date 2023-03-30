@@ -1,0 +1,12 @@
+B2-b: Lập trình điều khiển LED 7 đoạn
+Chương trình thực hiện các chức năng sau:
+    - Khi mới cấp điện(Reset), led 7 đoạn hiển thị 0000
+    - Khi K1 tác động: số đếm trên led 7 đoạn tăng 1 đơn vị
+    - Khi K2 tác động: số đếm trên led 7 đoạn giảm 1 đơn vị
+    - Khi K3 tác động: số đếm trên led 7 đoạn reset về 0000
+
+    - Khi mới cấp điện(Reset), led 7 đoạn hiển thị 0000
+    - Khi K1 tác động: số đếm trên led 7 đoạn tăng 1 đơn vị và dừng đếm
+    - Khi K2 tác động: số đếm trên led 7 đoạn giảm 1 đơn vị và dừng đếm
+    - Khi K3 tác động: số đếm trên led 7 tự động tăng với chu kỳ T = 1s (giây)
+    - Khi K4 tác động: số đếm trên led 7 tự động giảm với chu kỳ T = 1s (giây)

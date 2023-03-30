@@ -1,0 +1,8 @@
+B2-a: Lập trình điều khiển LED đơn 
+Chương trình thực hiện các chức năng sau:
+    - Khi mới cấp điện(Reset), các 8 led chớp tắt 5 lần
+    - Sau đó thực hiện chu kỳ vô tân gồm: dịch 1 led từ trái sang phải (D0 -> D7), trì hoản 0.5s
+
+    - Hiệu ứng 1: Các led dịch từ trái sang phải 
+    - Hiệu ứng 2: Các led sáng dần từ phải sang trái
+    - Hiệu ứng 3: Các led sáng dần từ trái sang phải
