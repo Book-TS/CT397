@@ -1,5 +1,3 @@
-#include <Arduino.h>
-
 #define VR1   A3
 
 // LED 7 Doan
