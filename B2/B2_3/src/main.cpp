@@ -29,7 +29,6 @@ int counter = 0;
 void setPinOut(char temp);
 void blinkLED(int n);
 void toDisplay(int counter);
-void pinOut(char temp);
 void Scanled();
 
 void yc1_setUp(void);

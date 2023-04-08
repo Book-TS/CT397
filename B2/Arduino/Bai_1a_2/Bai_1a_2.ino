@@ -6,9 +6,7 @@ unsigned char tbl[8]={0x01,0x02,0x04,0x08,0x10,0x20,0x40,0x80};
 void blinkLED(int n);
 void setPinOut(char temp);
 void shiftLeft();
-void shiftLeft_1();
 void shiftRight();
-void shiftRight_1();
 void brightShiftLeft();
 void brightShiftRight();
 
@@ -32,6 +30,7 @@ void setPinOut(char temp) {
   }
 }
 
+// Chop tat LED
 void blinkLED(int n) { 
   for(int i=0; i<n; i++) {
     setPinOut(0xff);
@@ -49,31 +48,11 @@ void shiftLeft() {
   }
 }
 
-// Dich tu phai sang trai
-void shiftLeft_1() {
-  char temp = 0x01; 
-  for(int i=0; i<8; i++) {
-    setPinOut(temp); 
-    delay(500); 
-    temp = temp<<1;
-  }
-}
-
 // Dich tu trai sang phai
 void shiftRight() {
   for(int i=7; i>=0; i--) {
     setPinOut(tbl[i]);
     delay(500);
-  }
-}
-
-// Dich tu trai sang phai        /*?*/
-void shiftRight_1() {
-  char temp = 0x80; 
-  for(int i=0; i<8; i++) {
-    setPinOut(temp); 
-    delay(500); 
-    temp = temp>>1;
   }
 }
 
@@ -87,7 +66,7 @@ void brightShiftLeft() {
   }
 }
 
-// Sang dan tu trai sang phai       /*?*/
+// Sang dan tu trai sang phai
 void brightShiftRight() {
   char temp = 0x80; 
   for(int i=0; i<8; i++) {
