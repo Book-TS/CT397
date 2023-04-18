@@ -68,11 +68,11 @@ void loop()
     if (digitalRead(K1) == 0)
         Regs[KEYCODE] = 2;
     
-    slave1.setTransmitBuffer(0, Regs[COUNTER]);
-    slave1.setTransmitBuffer(1, Regs[KEYCODE]);
+    slave1.setTransmitBuffer(1, Regs[COUNTER]);
+    slave1.setTransmitBuffer(0, Regs[KEYCODE]);
     slave1.writeMultipleRegisters(KEYCODE, 2);
     Scanled();
-    delay(5);
+    delay(50);
 }
 
 void setPinOut(char temp)

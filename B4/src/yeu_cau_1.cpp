@@ -11,69 +11,72 @@
 // #define COM 33
 
 // enum
-// {          // Slave registers
-//   KEY,     // Register 0
-//   COUNTER, // Register 1
-//   NUM1,    // Register 2
-//   NUM2,    // Register 3
-//   MB_REGS
+// {            // Slave registers
+//     KEY,     // Register 0
+//     COUNTER, // Register 1
+//     NUM1,    // Register 2
+//     NUM2,    // Register 3
+//     MB_REGS
 // };
 
 // int regs[MB_REGS];
 // int i = 0, counter = 0, timer = 0;
 
 // const char PinOut[] = {22, 23, 24, 25, 26, 27, 28, 29};
-// const char ctr[] = {37, 36, 35, 34};
 
 // void setPinOut(char temp);
 
 // void setup()
 // {
-//   for (int i = 0; i < 8; i++)
-//     pinMode(PinOut[i], OUTPUT);
-//   for (int i = 0; i < 4; i++)
-//     pinMode(ctr[i], OUTPUT);
+//     for (int i = 0; i < 8; i++)
+//         pinMode(PinOut[i], OUTPUT);
 
-//   digitalWrite(ctr[3], HIGH);
+//     pinMode(COM, OUTPUT);
+//     digitalWrite(COM, LOW);
+//     pinMode(K0, INPUT_PULLUP);
+//     pinMode(K1, INPUT_PULLUP);
+//     pinMode(K2, INPUT_PULLUP);
+//     pinMode(K3, INPUT_PULLUP);
 
-//   pinMode(COM, OUTPUT);
-//   digitalWrite(COM, LOW);
-//   pinMode(K0, INPUT_PULLUP);
-//   pinMode(K1, INPUT_PULLUP);
-//   pinMode(K2, INPUT_PULLUP);
-//   pinMode(K3, INPUT_PULLUP);
-
-//   mbs.configure(0, SLAVE, BAUD, 2);
+//     mbs.configure(0, SLAVE, BAUD, 2);
 // }
 
 // void loop()
 // {
-//   mbs.update(regs, MB_REGS);
-//   setPinOut(regs[NUM1]);
-//   if (timer++ > 20)
-//   {
-//     timer = 0;
-//     counter++;
-//     regs[COUNTER] = counter;
-//   }
+//     mbs.update(regs, MB_REGS);
+//     setPinOut(regs[NUM1]);
+//     if (timer++ > 20)
+//     {
+//         timer = 0;
+//         counter++;
+//         regs[COUNTER] = counter;
+//     }
 
-//   if (digitalRead(K0) == 0) {
-//     regs[KEY] = 1;
-//     while (!digitalRead(K0));
-//   }
-//   if (digitalRead(K1) == 0) {
-//     regs[KEY] = 2;
-//     while (!digitalRead(K1));
-//   }
-//   if (digitalRead(K2) == 0) {
-//     regs[KEY] = 3;
-//     while (!digitalRead(K2));
-//   }
-//   if (digitalRead(K3) == 0) {
-//     regs[KEY] = 4;
-//     while (!digitalRead(K3));
-//   }
-//   delay(50);
+//     if (digitalRead(K0) == 0)
+//     {
+//         regs[KEY] = 1;
+//         while (!digitalRead(K0))
+//             ;
+//     }
+//     if (digitalRead(K1) == 0)
+//     {
+//         regs[KEY] = 2;
+//         while (!digitalRead(K1))
+//             ;
+//     }
+//     if (digitalRead(K2) == 0)
+//     {
+//         regs[KEY] = 3;
+//         while (!digitalRead(K2))
+//             ;
+//     }
+//     if (digitalRead(K3) == 0)
+//     {
+//         regs[KEY] = 4;
+//         while (!digitalRead(K3))
+//             ;
+//     }
+//     delay(50);
 // }
 
 // void setPinOut(char temp)
