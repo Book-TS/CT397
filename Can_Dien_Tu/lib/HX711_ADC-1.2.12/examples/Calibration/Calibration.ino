@@ -17,15 +17,15 @@
        LoadCell.refreshDataSet();
        float newCalibrationValue = LoadCell.getNewCalibration(known_mass);
 */
-#include <Arduino.h>
+
 #include <HX711_ADC.h>
 #if defined(ESP8266)|| defined(ESP32) || defined(AVR)
 #include <EEPROM.h>
 #endif
 
 //pins:
-const int HX711_dout = 16; //mcu > HX711 dout pin
-const int HX711_sck = 4; //mcu > HX711 sck pin
+const int HX711_dout = 4; //mcu > HX711 dout pin
+const int HX711_sck = 5; //mcu > HX711 sck pin
 
 //HX711 constructor:
 HX711_ADC LoadCell(HX711_dout, HX711_sck);
@@ -33,11 +33,8 @@ HX711_ADC LoadCell(HX711_dout, HX711_sck);
 const int calVal_eepromAdress = 0;
 unsigned long t = 0;
 
-void calibrate();
-void changeSavedCalFactor();
-
 void setup() {
-  Serial.begin(115200); delay(10);
+  Serial.begin(57600); delay(10);
   Serial.println();
   Serial.println("Starting...");
 
