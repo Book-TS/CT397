@@ -1,8 +1,9 @@
 // #include <Arduino.h>
 // #include <HX711.h>
+// #include "soc/rtc.h"
 
-// #define LOADCELL_DOUT_PIN 23
-// #define LOADCELL_SCK_PIN 22
+// #define LOADCELL_DOUT_PIN 14
+// #define LOADCELL_SCK_PIN 12
 
 // #define calibValue 103918
 
@@ -33,8 +34,9 @@
 
 // void initLoadCell()
 // {
+//     setCpuFrequencyMhz(80);
 //     scale.begin(LOADCELL_DOUT_PIN, LOADCELL_SCK_PIN);
 
 //     scale.set_scale(calibValue); 
-//     scale.tare();
+//     scale.tare(); 
 // }
